@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calgary Lawn and Snow Services | Year-Round Lawn, Snow &amp; Pet Waste Care</title>
+<meta name="description" content="Calgary Lawn and Snow Services — 30 years of lawn care in Calgary. Mowing from $40, snow shoveling from $125/mo, spring cleanup from $129, weekly dog-poop pickup from $13. Free estimates: 403-253-5509.">
+<style>
+  :root { --green:#2e7d32; --green-d:#1b5e20; --navy:#10202e; --amber:#f5a623; --paper:#f7faf6; --ink:#1c2b21; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Segoe UI',system-ui,-apple-system,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6; }
+  .wrap { max-width:1120px; margin:0 auto; padding:0 22px; }
+
+  header { position:sticky; top:0; z-index:50; background:rgba(16,32,46,.97); backdrop-filter:blur(8px); }
+  .nav { display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
+  .logo { font-weight:800; font-size:1.2rem; color:#fff; text-decoration:none; letter-spacing:.3px; }
+  .logo span { color:var(--amber); }
+  .nav-links { display:flex; gap:24px; align-items:center; }
+  .nav-links a { text-decoration:none; color:#d9e6dc; font-weight:600; font-size:.95rem; }
+  .nav-links a:hover { color:var(--amber); }
+  .btn { display:inline-block; background:var(--green); color:#fff !important; padding:12px 28px; border-radius:999px; font-weight:800; text-decoration:none; transition:.2s; border:none; cursor:pointer; font-size:1rem; }
+  .btn:hover { background:var(--green-d); transform:translateY(-1px); }
+  .btn-amber { background:var(--amber); color:#241a05 !important; }
+  .btn-amber:hover { background:#dd8c0d; }
+  @media(max-width:780px){ .nav-links a:not(.btn){ display:none; } }
+
+  .hero { position:relative; min-height:88vh; display:flex; align-items:flex-end; color:#fff; overflow:hidden; }
+  .hero-bg { position:absolute; inset:0; }
+  .hero-bg img { width:100%; height:100%; object-fit:cover; display:block; }
+  .hero-shade { position:absolute; inset:0; background:linear-gradient(to top, rgba(8,18,26,.86) 0%, rgba(8,18,26,.3) 50%, rgba(8,18,26,.2) 100%); }
+  .hero-inner { position:relative; padding:70px 0 80px; width:100%; }
+  .hero .can { display:inline-block; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); padding:8px 18px; border-radius:999px; font-size:.85rem; font-weight:700; margin-bottom:14px; backdrop-filter:blur(4px); }
+  .hero h1 { font-size:clamp(2.3rem,5.5vw,4rem); line-height:1.08; font-weight:800; max-width:800px; text-shadow:0 2px 20px rgba(0,0,0,.5); }
+  .hero h1 em { color:var(--amber); font-style:normal; }
+  .hero p.lead { font-size:1.18rem; max-width:660px; margin:18px 0 28px; color:#eef4ee; }
+  .hero-cta-row { display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+  .phone-big { font-size:1.5rem; font-weight:800; color:#fff; text-decoration:none; }
+  .phone-big:hover { color:var(--amber); }
+  .badges { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+  .badges span { background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); padding:8px 16px; border-radius:999px; font-size:.87rem; font-weight:600; backdrop-filter:blur(4px); }
+
+  section { padding:76px 0; }
+  .kicker { color:var(--green); font-weight:800; text-transform:uppercase; letter-spacing:2px; font-size:.82rem; margin-bottom:10px; }
+  h2 { font-size:clamp(1.7rem,3.5vw,2.5rem); font-weight:800; margin-bottom:14px; line-height:1.2; }
+  .sec-sub { color:#4f5f53; max-width:700px; margin-bottom:40px; font-size:1.05rem; }
+
+  .svc { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:22px; }
+  .svc-card { background:#fff; border-radius:18px; overflow:hidden; border:1px solid #dfe7df; box-shadow:0 8px 30px rgba(16,32,46,.07); display:flex; flex-direction:column; }
+  .svc-card img { width:100%; height:170px; object-fit:cover; display:block; }
+  .svc-card .body { padding:22px 24px 26px; display:flex; flex-direction:column; flex:1; }
+  .svc-card .row { display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-bottom:8px; }
+  .svc-card h3 { font-size:1.1rem; }
+  .svc-card .price { font-weight:800; color:var(--green); white-space:nowrap; font-size:1.05rem; }
+  .svc-card p { color:#4f5f53; font-size:.93rem; flex:1; }
+  .svc-card .ico { font-size:1.6rem; margin-bottom:8px; }
+
+  .summer { background:#fff; }
+  .winter { background:#eef4fb; }
+
+  .why { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px; margin-top:20px; }
+  .why-card { background:#fff; border:1px solid #dfe7df; border-radius:18px; padding:30px 26px; text-align:center; }
+  .why-card b { font-size:2.2rem; color:var(--green); display:block; font-weight:800; }
+  .why-card span { color:#4f5f53; font-weight:600; font-size:.93rem; }
+
+  .contact-band { background:linear-gradient(135deg, var(--navy) 0%, #1a3a2a 100%); color:#fff; border-radius:24px; padding:60px 32px; }
+  .contact-band h2 { color:#fff; }
+  .contact-band p { color:#b9cdd4; max-width:620px; margin:12px 0 8px; }
+  .contact-lines { margin:20px 0 30px; }
+  .contact-lines a { color:#fff; font-weight:800; text-decoration:none; font-size:1.4rem; display:block; margin:8px 0; }
+  .contact-lines a:hover { color:var(--amber); }
+  form { max-width:560px; }
+  form .row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media(max-width:600px){ form .row{ grid-template-columns:1fr; } }
+  form label { display:block; font-weight:600; font-size:.9rem; margin:12px 0 6px; color:#eef4ee; }
+  form input, form select, form textarea { width:100%; padding:12px 14px; border:1.5px solid #2c4a3a; border-radius:12px; font-size:1rem; font-family:inherit; background:#0c1c14; color:#fff; }
+  form input::placeholder, form textarea::placeholder { color:#7d9390; }
+  form textarea { min-height:90px; resize:vertical; }
+  form select option { background:#0c1c14; }
+
+  footer { background:var(--navy); color:#8fa0a8; padding:36px 0; font-size:.92rem; }
+  footer .wrap { display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; align-items:center; }
+  footer a { color:#fff; font-weight:700; text-decoration:none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">🌱 CALGARY LAWN <span>&amp; SNOW</span></a>
+    <nav class="nav-links">
+      <a href="#summer">Summer</a>
+      <a href="#winter">Winter</a>
+      <a href="#allyear">All Year</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="tel:+14032535509">403-253-5509</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-bg"><img src="photos/hero-lawn.jpg" alt="Lush green striped lawn in Calgary"></div>
+  <div class="hero-shade"></div>
+  <div class="wrap hero-inner">
+    <div class="can">🇨🇦 Proudly Canadian — no price increases due to tariffs</div>
+    <h1>Your yard, handled <em>all year long.</em></h1>
+    <p class="lead">30 years of lawn care in Calgary — our hometown. Mowing in summer, shoveling in winter, and dog-poop pickup every week. One call covers it all.</p>
+    <div class="hero-cta-row">
+      <a class="btn btn-amber" href="#contact">Free Estimate</a>
+      <a class="phone-big" href="tel:+14032535509">📞 403-253-5509</a>
+    </div>
+    <div class="badges">
+      <span>⭐ 5.0 from 100 reviews</span>
+      <span>🏡 30+ years in Calgary</span>
+      <span>📋 Free service estimates</span>
+    </div>
+  </div>
+</div>
+
+<section id="summer" class="summer">
+  <div class="wrap">
+    <div class="kicker">☀️ Summer</div>
+    <h2>Lawn care that makes the neighbours look twice.</h2>
+    <div class="svc" style="margin-top:28px;">
+      <div class="svc-card"><img src="photos/hero-lawn.jpg" alt="Striped green lawn"><div class="body"><div class="row"><h3>Lawn Mowing</h3><span class="price">from $40</span></div><p>Healthy, beautifully maintained lawns from an experienced team dedicated to the perfect cut.</p></div></div>
+      <div class="svc-card"><img src="photos/spring.jpg" alt="Spring yard cleanup"><div class="body"><div class="row"><h3>Spring Cleanup</h3><span class="price">from $129</span></div><p>Aeration, power raking, and debris removal to wake your lawn up for the warm months.</p></div></div>
+      <div class="svc-card"><img src="photos/hedge.jpg" alt="Trimmed hedges"><div class="body"><div class="row"><h3>Lawn Maintenance</h3><span class="price">from $49</span></div><p>Season-long care using the latest techniques so your outdoor space shines all year.</p></div></div>
+      <div class="svc-card"><div class="body"><div class="ico">🌳</div><div class="row"><h3>Hedge Trimming</h3><span class="price">from $60</span></div><p>Personalized trimming that boosts curb appeal while caring for your hedges' health.</p></div></div>
+      <div class="svc-card"><div class="body"><div class="ico">🚜</div><div class="row"><h3>Rototilling</h3><span class="price">from $60</span></div><p>Meticulous soil preparation — the perfect foundation for your garden projects.</p></div></div>
+      <div class="svc-card"><div class="body"><div class="ico">🍂</div><div class="row"><h3>Fall Cleanup</h3><span class="price">from $140</span></div><p>Leaves, debris, and garden waste cleared so your yard heads into winter well-kept.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="winter" class="winter">
+  <div class="wrap">
+    <div class="kicker" style="color:#2a6f8e;">❄️ Winter</div>
+    <h2>Calgary winters are harsh. Shoveling shouldn't be.</h2>
+    <div class="svc" style="margin-top:28px;">
+      <div class="svc-card"><img src="photos/snow-shovel.jpg" alt="Snow-cleared driveway and sidewalk"><div class="body"><div class="row"><h3>Snow Shoveling</h3><span class="price">from $125</span></div><p>Dependable driveway and walkway clearing — enjoy winter without the heavy lifting.</p></div></div>
+      <div class="svc-card"><div class="body"><div class="ico">🧂</div><div class="row"><h3>Monthly Snow Clearing</h3><span class="price">from $125/mo</span></div><p>Stay bylaw-compliant all winter — sidewalks clear within 24 hours, <strong>free de-icing &amp; ice melt</strong> included with monthly service.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="allyear">
+  <div class="wrap">
+    <div class="kicker">🐾 All Year</div>
+    <h2>Dog-poop pickup — weekly, stress-free.</h2>
+    <p class="sec-sub">Easy weekly subscriptions keep your yard clean and safe for the whole family. Starting at just <strong>$13</strong> — more quality time with your furry friend, zero mess.</p>
+    <div class="why">
+      <div class="why-card"><b>30+</b><span>Years in business</span></div>
+      <div class="why-card"><b>5.0</b><span>Average from 100 reviews</span></div>
+      <div class="why-card"><b>9</b><span>Services, one phone number</span></div>
+      <div class="why-card"><b>$0</b><span>Free service estimates</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0;">
+  <div class="wrap">
+    <div class="contact-band">
+      <div class="kicker" style="color:var(--amber);">Contact</div>
+      <h2>Get your free estimate.</h2>
+      <p>Call, text, or send the form — we'll get back to you with a quote.</p>
+      <div class="contact-lines">
+        <a href="tel:+14032535509">📞 403-253-5509</a>
+        <a href="tel:+15875838200">📞 587-583-8200</a>
+        <a href="mailto:hello@calgarylawnandsnowservices.ca" style="font-size:1.05rem;">✉️ hello@calgarylawnandsnowservices.ca</a>
+      </div>
+      <form id="quoteForm">
+        <div class="row">
+          <div><label>Name<input required name="name" placeholder="Your name"></label></div>
+          <div><label>Phone<input required name="phone" type="tel" placeholder="(403) 555-0123"></label></div>
+        </div>
+        <label>Service needed
+          <select name="service"><option>Lawn Mowing (from $40)</option><option>Spring Cleanup (from $129)</option><option>Fall Cleanup (from $140)</option><option>Lawn Maintenance (from $49)</option><option>Hedge Trimming (from $60)</option><option>Rototilling (from $60)</option><option>Snow Shoveling (from $125)</option><option>Monthly Snow Clearing (from $125/mo)</option><option>Dog Waste Cleanup (from $13)</option></select>
+        </label>
+        <label>Message<textarea name="msg" placeholder="Address, yard details..."></textarea></label>
+        <button class="btn btn-amber" type="submit" style="margin-top:18px;">Request Free Estimate</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff;">🌱 Calgary Lawn and Snow Services</strong> · Division of A Cut Above Lawn and Yard Services · <a href="tel:+14032535509">403-253-5509</a></div>
+    <div>© 2026 Calgary Lawn and Snow Services</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('quoteForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const subject = encodeURIComponent('Free estimate request — ' + f.get('service'));
+  const body = encodeURIComponent('Name: '+f.get('name')+'\nPhone: '+f.get('phone')+'\nService: '+f.get('service')+'\n\nMessage:\n'+f.get('msg'));
+  window.location.href = 'mailto:hello@calgarylawnandsnowservices.ca?subject='+subject+'&body='+body;
+});
+</script>
+</body>
+</html>
